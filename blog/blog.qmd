@@ -1,0 +1,17 @@
+---
+title: "Blog"
+listing:
+  contents: posts/
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  fields: [date, title, reading-time, description, categories, image]
+  feed: true
+  date-format: "DD MMM YY"
+page-layout: full
+title-block-banner: true
+---
+
+Here are some of my thoughts, I write mostly for myself to better understand and remeber things I've done. I hope this brain dump of my thoughts provides helpful for you too!
