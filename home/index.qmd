@@ -1,5 +1,8 @@
 ---
 title: "James Thurgood"
+format:
+  html:
+    toc: false
 ---
 
 ![](https://gravatar.com/avatar/7c9a0c2aa7a23049f4ba9f0d696db681be48d3db6d0227693ced325b7a7c1f04?s=200
