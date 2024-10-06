@@ -6,10 +6,10 @@ website:
   title: "mysite"
   page-footer: 
     left: "Copyright 2024, James Thurgood"
-    center: "The views and opinions expressed are my own and do not reflect my employers." 
+    center: "The views and opinions expressed are my own and do not reflect my employer." 
   navbar:
     left:
-      - href: index.qmd
+      - href: home/index.qmd
         text: Home
       - blog/blog.qmd
 
