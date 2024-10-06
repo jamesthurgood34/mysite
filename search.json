@@ -1,16 +1,23 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "blog/posts/containers_and_architectures/index.html",
+    "href": "blog/posts/containers_and_architectures/index.html",
+    "title": "Containers and Architectures",
     "section": "",
-    "text": "Under construction 🚧"
+    "text": "coming soon…"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
+    "objectID": "index.html#machine-learning-engineer",
+    "href": "index.html#machine-learning-engineer",
     "title": "James Thurgood",
+    "section": "🖥️ Machine Learning Engineer",
+    "text": "🖥️ Machine Learning Engineer\nWelcome to my corner of the web! I’m James, a machine engineer with a passion for using technology to drive efficiency and value.\n\n💼 Professional Overview\nCurrently working NatWest driving value through use of generative AI.\nI thrive on tackling interesting, novel challenges that push the boundaries of what’s possible with technology.\n\n\n🌄 Beyond the Code\nWhen I’m not immersed in data and algorithms, you’ll likely find me:\n\n🏃‍♂️ Running trails (I’ve completed two marathons!)\n🏔️ Climbing Munros in Scotland\n🏕️ Seeking out new outdoor adventures\n\n\n\n🤝 Let’s Connect\nWhether you’re interested in discussing potential collaborations, sharing ideas about machine learning applications, or swapping stories about outdoor escapades, I’m always open to connecting with like-minded individuals.\nFeel free to explore my site to learn more about my projects and experiences!"
+  },
+  {
+    "objectID": "blog/blog.html",
+    "href": "blog/blog.html",
+    "title": "Blog",
     "section": "",
-    "text": "Hi 👋\nThis is a space for me to signpost what I’ve been up to and a space to blog and write about things.\nIf it’s not obvious this is under construction 🚧"
+    "text": "Here are some of my thoughts, I write mostly for myself to better understand and remeber things I’ve done. I hope this brain dump of my thoughts provides helpful for you too!\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nContainers and Architectures\n\n\n\n\n\n\ncontainers\n\n\n\n\n\n\n\n\n\n06 Oct 24\n\n\n1 min\n\n\n\n\n\n\nNo matching items"
   }
 ]

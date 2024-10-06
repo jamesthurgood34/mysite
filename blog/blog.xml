@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>mysite</title>
+<link>https://jamesthurgood34.github.io/mysite/blog/blog.html</link>
+<atom:link href="https://jamesthurgood34.github.io/mysite/blog/blog.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<generator>quarto-1.5.57</generator>
+<lastBuildDate>Sun, 06 Oct 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Containers and Architectures</title>
+  <dc:creator>James Thurgood</dc:creator>
+  <link>https://jamesthurgood34.github.io/mysite/blog/posts/containers_and_architectures/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>coming soon…</p>
+
+
+
+ ]]></description>
+  <category>containers</category>
+  <guid>https://jamesthurgood34.github.io/mysite/blog/posts/containers_and_architectures/</guid>
+  <pubDate>Sun, 06 Oct 2024 00:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>
