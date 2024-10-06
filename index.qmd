@@ -5,10 +5,23 @@ title: "James Thurgood"
 ![](https://gravatar.com/avatar/7c9a0c2aa7a23049f4ba9f0d696db681be48d3db6d0227693ced325b7a7c1f04?s=200
 )
 
-Hi 👋
+## 🖥️ Machine Learning Engineer
 
-This is a space for me to signpost what I've been up to and a space to blog and write about things.
+Welcome to my corner of the web! I'm James, a machine engineer with a passion for using technology to drive efficiency and value.
 
-If it's not obvious this is under construction 🚧
+### 💼 Professional Overview
+Currently working NatWest driving value through use of generative AI.
 
+I thrive on tackling interesting, novel challenges that push the boundaries of what's possible with technology.
 
+### 🌄 Beyond the Code
+When I'm not immersed in data and algorithms, you'll likely find me:
+
+- 🏃‍♂️ Running trails (I've completed two marathons!)
+- 🏔️ Climbing Munros in Scotland
+- 🏕️ Seeking out new outdoor adventures
+
+### 🤝 Let's Connect
+Whether you're interested in discussing potential collaborations, sharing ideas about machine learning applications, or swapping stories about outdoor escapades, I'm always open to connecting with like-minded individuals.
+
+Feel free to explore my site to learn more about my projects and experiences!
