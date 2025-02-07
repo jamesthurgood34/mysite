@@ -16,7 +16,7 @@ website:
 format:
   html:
     theme: cosmo
-    css: styles.css
+    css: styles 
     toc: true
 
 execute:
