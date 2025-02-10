@@ -1,0 +1,17 @@
+---
+title: "My Stack"
+format:
+  html:
+    toc: false
+---
+This page lays out the stack of tools and software that I use as part of both my personal and professional life.
+
+This website is built using [Quarto](https://quarto.org/) and hosted on [GitHub Pages](https://pages.github.com/). Quarto is the successor to R Markdown, and if you've used R Markdown before, you'll know why that is a big plus! Think Jupyter notebooks but an order of magnitude better!
+
+My personal PC is an HP Envy running Windows because I stubbornly refuse to use an Apple product because of [this product selling mentality](https://youtu.be/-XSC_UG5_kU?si=Nt1R2u00XIQiK38I&t=19)[^1][^2][^3]. I have tried running pure Ubuntu but ran into a bunch of driver issues which meant I couldn't vary the screen brightness, so instead, I use WSL to run Ubuntu and use Windows for everything else because it just works.
+
+For an IDE, I'm between VSCode and [Cursor](https://www.cursor.com/), having recently switched. I'm still trying to find the best way of adding an LLM into my workflow - I'm sure I'll be using a new IDE/LLM setup next week! For Python, I use [pyenv](https://github.com/pyenv/pyenv) as it covers environment management and Python version management, but I have tested [UV](https://docs.astral.sh/uv/getting-started/installation/) and looking to make the switch soon.
+
+[^1]: Yes, I know the video is fake, but it makes the point and makes me laugh every time I watch it.
+[^2]: Ironically, I have a dongle plugged in to my current laptop...
+[^3]: I am very tempted by the Apple Silicon!
