@@ -2,7 +2,7 @@
 date: "2025-02-02"
 layout: post
 title: "Replicating DeepSeek’s Breakthrough on a Budget: How RL Transforms Tiny Models into Thinkers"
-categories: [deepseek, RL]
+categories: [DeepSeek, RL, GPUs, Qwen, TinyZero]
 image: mandatory_ai_generated_image.jpg
 ---
 
