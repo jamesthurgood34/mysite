@@ -1,17 +1,17 @@
 ---
 date: "2025-02-02"
 layout: post
-title: "RL is all you need"
+title: "Replicating DeepSeek’s Breakthrough on a Budget: How RL Transforms Tiny Models into Thinkers"
 categories: [deepseek, RL]
 ---
 
 # Replicating DeepSeek with TinyZero..?
 
-Amongst all the hype around DeepSeek you may have spotted the following headline.
+Amongst all the hype around DeepSeek, you may have spotted the following headline.
 
 ![](DeepSeek_AI_replicated.png)
 
-At first glance, it seems implausible that it is possible to replicate a $5 million training run for just $30 - and indeed \*\*spoilers\*\* it's not possible! Instead, using [TinyZero](https://github.com/Jiayi-Pan/TinyZero/tree/main) the project which this headline is bases on, I am able to validate some key findings from the DeepSeek team's published paper. While less headline catching this is still a massive deal! In this blog, I'll walk through my experience using TinyZero, a fascinating project that demonstrates how pre-trained models can develop reasoning and self-verification capabilities with minimal computational resources. 
+At first glance, it seems implausible that it is possible to replicate a $5 million training run for just $30 - and indeed \*\*spoilers\*\* it's not possible! Instead, using [TinyZero](https://github.com/Jiayi-Pan/TinyZero/tree/main) the project which this headline is based on, I am able to validate some key findings from the DeepSeek team's published paper. While less headline-catching this is still a massive deal! In this blog, I'll walk through my experience using TinyZero, a fascinating project that demonstrates how pre-trained models can develop reasoning and self-verification capabilities with minimal computational resources. 
 
 With the release of DeepSeek R1, and most importantly openness by which it was released with an open model and [their methodology](https://arxiv.org/abs/2501.12948), many of the preconceived ideas in the AI research community have been turned on their head! For example, the notion that fine-tuning is the preserve of the only a few tech companies with large GPU resources at their disposal. Whereas now it is possible with a large but achievable budgets for many corporates to achieve this. Secondly, when developing reasoning models extensive, costly supervised fine tuning is required, whereas this blog shows we can rely on reinforcement learning instead.
 
@@ -19,7 +19,7 @@ With all this said, lets take a look at the [TinyZero](https://github.com/Jiayi-
 
 # The GPU Struggle
 
-First up we need to find a couple of GPUs to run this project on. Unfortunately I don't have a couple of H100s sitting under my desk, given a quick google shopping search shows they are going for around £30k each! Good news, is there is now a number of providers that allow you to rent a machine with GPU resources on a pay as you go basis. I initially tried [Lighting Studio](https://lightning.ai/hlin-verl/studios/verl-getting-started) as this is recommended by [veRL](https://github.com/volcengine/verl) as you are able to run a single L4 GPU for free! (subject to a quota). Running the project I was met with the error every machine learning engineer and has railed against:
+First up we need to find a couple of GPUs to run this project on. Unfortunately I don't have a couple of H100s sitting under my desk, given a quick google shopping search shows they are going for around £30k each! Good news, is there is now a number of providers that allow you to rent a machine with GPU resources on a pay as you go basis. I initially tried [Lightning Studio](https://lightning.ai/hlin-verl/studios/verl-getting-started) as this is recommended by [veRL](https://github.com/volcengine/verl) as you are able to run a single L4 GPU for free! (subject to a quota). Running the project I was met with the error every machine learning engineer and has railed against:
 
 ```bash
 torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 148.00 MiB. GPU 0 has a total capacity of 14.75 GiB of which 7.06 MiB is free...
@@ -27,9 +27,9 @@ torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 148.00 MiB. GPU 0 
 
 I quickly realised trying to replicate this project that a lot more GPU VRAM was required!
 
-Taking a closer look at the [weights & biases of the TinyZero run](https://wandb.ai/jiayipan/TinyZero/runs/pa2vfdcm/overview) we can see they used not 1, but 8 H200s! I'm already starting to think there is a little creative accounting going on if you can rent 8 H200s for $30 given the 4 hour compute time! While lighting AI is a very compelling product, to use multiple GPUs and anything more powerful than a L4 GPU you'll need to subscribe to their $140/month tier, and specifically reserve a GPU for a period of time if you are wanting a H100 or above, so this was a non-starter. As a side note, Lighting AI looks like a great product giving you a VS code interface on a machine which allows you to "pick up" your project and your python environment and run it on a number of GPU configurations. This easily allow you to test code on a cheap set of resources and then with the click of a button move to a cluster of powerful GPUs.
+Taking a closer look at the [weights & biases of the TinyZero run](https://wandb.ai/jiayipan/TinyZero/runs/pa2vfdcm/overview) we can see they used not 1, but 8 H200s! I'm already starting to think there is a little creative accounting going on if you can rent 8 H200s for $30 given the 4-hour compute time! While lighting AI is a very compelling product, to use multiple GPUs and anything more powerful than a L4 GPU you'll need to subscribe to their $140/month tier, and specifically reserve a GPU for a period of time if you are wanting a H100 or above, so this was a non-starter. As a side note, Lighting AI looks like a great product giving you a VS code interface on a machine which allows you to "pick up" your project and your python environment and run it on a number of GPU configurations. This easily allow you to test code on a cheap set of resources and then with the click of a button move to a cluster of powerful GPUs.
 
-After consulting a *reliable source* (Reddit) I came across [tensordock](https://www.tensordock.com/) which allows you to provision a GPU servers with no commitment just a per hour charge. The other key feature is that its a "top-up account". E.g. You deposit money to the site and then you watch you pennies melt away in a puff of GPU heat. Most importantly for me this means there will be no nasty bills! The downside is once your account hits $0 they'll go `rm -rf /` your machine so you need to keep a close eye on your balance!
+After consulting a *reliable source* (Reddit) I came across [tensordock](https://www.tensordock.com/) which allows you to provision a GPU servers with no commitment just a per hour charge. The other key feature is that its a "top-up account". E.g. You deposit money to the site and then you watch your pennies melt away in a puff of GPU heat. Most importantly for me this means there will be no nasty bills! The downside is once your account hits $0 they'll go `rm -rf /` your machine so you need to keep a close eye on your balance!
 
 # The Task
 
@@ -96,7 +96,7 @@ $$
 875 + 88 \\
 963
 $$     
-4. The models "reasoning" abilities resembles a distracted auditor watching TickTok `... \(875 + 2\*44 = 98\) ... bringing our total to 98.`
+4. The models "reasoning" abilities resembles a distracted auditor watching TikTok `... \(875 + 2\*44 = 98\) ... bringing our total to 98.`
 
 So no surprises there, a model that was built and trained on text doesn't have great mathematical abilities! This is where our fine-tuning can help.
 
@@ -122,7 +122,7 @@ ollama run qwen2.5:3b "I have 5 eggs on a piece of wood hanging over the edge of
 > In summary, hitting the end of the wooden object containing the eggs could result in a mix of scenarios: no change (if the hit was very light), partial dislodgement, or complete collapse. The outcome depends largely on how hard you strike it and what kind of structure it has.
 :::
 
-For ease we have been using ollama but we'll need to now download the model from hugginface to input into this training run.
+For ease we have been using ollama but we'll need to now download the model from HuggingFace to input into this training run.
 
 ```bash
 huggingface-cli download Qwen/Qwen2.5-3B --local-dir models/Qwen/Qwen2.5-3B 
@@ -269,7 +269,7 @@ the power going to the GPU was idling for the most part! For reference the maxim
 
 ![](GPU_power.png)
 
-This narrative if further confirmed when we look at MFU (Model FLOPs Utilization) which is defined by:
+This narrative is further confirmed when we look at MFU (Model FLOPs Utilization) which is defined by:
 
 $$
 MFU = \frac{Estimated Actual Achieved FLOPs}{Theoretical Peak FLOPs}
@@ -286,8 +286,15 @@ Hopefully you have enjoyed this blog demonstrating the results shown in [TinyZer
 
 Some of the key takeaways I have from running this experiment:
 
-- While its naturally hard to replicate the full DeepSeek model its great to see the same learnings and theories can be applied to smaller models and the same results can be seen for just $30!
-- The brutal simplistic approach of DeepSeek show how reasoning abilities can created without a costly training data and rather you can develop this with reinforcement learning.
+- While it's naturally hard to replicate the full DeepSeek model its great to see the same learnings and theories can be applied to smaller models and the same results can be seen for just $30!
+- The brutal simplistic approach of DeepSeek shows how reasoning abilities can created without a costly training data and rather you can develop this with reinforcement learning.
 - GPUs are expensive! And there is lots of room for optimisations which in the long run will bring about huge savings
 - All of this came about with DeepSeek initially open-sourcing their model and methodology. Openness fuels Innovation!
 
+Next steps:
+
+- Explore replacing PPO with GRPO to further demonstrate the findings from the DeepSeek paper  
+- Experiment with alternative models
+- Optimise GPU use
+
+[All of which seem to be already been done, the open source community works fast!](https://github.com/Jiayi-Pan/TinyZero/issues/5#issuecomment-2624161643)
