@@ -18,8 +18,10 @@ format:
     theme: 
       light: cosmo
       dark: cyborg
-    css: styles.css
+    code-overflow: wrap
     toc: true
+    linestretch: 2
+    html-math-method: katex
 
 execute:
   freeze: auto
