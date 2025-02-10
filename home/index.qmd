@@ -13,7 +13,7 @@ format:
 Welcome to my corner of the web! I'm James, a machine engineer with a passion for using technology to drive efficiency and value.
 
 ### 💼 Professional Overview
-Currently working NatWest driving value through use of generative AI.
+Currently working NatWest leading a team of Machine Learning Engineers to fine-tune models and build out foundational AI services.
 
 I thrive on tackling interesting, novel challenges that push the boundaries of what's possible with technology.
 
