@@ -12,6 +12,8 @@ My personal PC is an HP Envy running Windows because I stubbornly refuse to use 
 
 For an IDE, I'm between VSCode and [Cursor](https://www.cursor.com/), having recently switched. I'm still trying to find the best way of adding an LLM into my workflow - I'm sure I'll be using a new IDE/LLM setup next week! For Python, I use [pyenv](https://github.com/pyenv/pyenv) as it covers environment management and Python version management, but I have tested [UV](https://docs.astral.sh/uv/getting-started/installation/) and looking to make the switch soon.
 
+I use [Gravatar](https://en.gravatar.com/) for my profile pictures, which is a service that allows you to use a profile picture from a URL using your email address as the identifier as a hash. Every website should support Gravatar! (Sadly, not all do.)
+
 [^1]: Yes, I know the video is fake, but it makes the point and makes me laugh every time I watch it.
 [^2]: Ironically, I have a dongle plugged in to my current laptop...
 [^3]: I am very tempted by the Apple Silicon!
