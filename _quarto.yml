@@ -3,21 +3,39 @@ project:
   output-dir: docs
 
 website:
-  title: "mysite"
+  title: "James Thurgood"
+  favicon: "home/rocket.png"
+  site-url: "https://jamesthurgood.com"
+  repo-url: "https://github.com/jamesthurgood34/mysite"
   page-footer: 
     center: "The views and opinions expressed are my own and do not reflect my employer." 
   navbar:
+    pinned: true
     left:
       - href: home/index.qmd
         text: Home
       - blog/blog.qmd
       - mystack/mystack.qmd
+    right:
+      - icon: rss
+        aria-label: rss
+        href: feed.xml
+      - icon: twitter
+        aria-label: twitter
+        href: https://twitter.com/JamesT99281
+      - text: "{{< iconify lucide-lab butterfly >}}"
+        aria-label: bluesky
+        href: https://bsky.app/profile/jamesthurgood.com
+      - icon: github
+        aria-label: github
+        href: https://github.com/jamesthurgood34
+      - icon: linkedin
+        aria-label: linkedin
+        href: https://www.linkedin.com/in/james-thurgood-21ba4a10b
 
 format:
   html:
-    theme: 
-      light: cosmo
-      dark: cyborg
+    theme: cyborg
     code-overflow: wrap
     toc: true
     linestretch: 2

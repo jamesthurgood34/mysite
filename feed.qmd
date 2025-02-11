@@ -1,0 +1,9 @@
+---
+title: "RSS feed"
+search: false
+listing:
+  feed: true
+  contents:
+    - "blog/posts/**/*.qmd"
+    - "blog/posts/**/*.md"
+---
