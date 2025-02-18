@@ -5,8 +5,7 @@ format:
     toc: false
 ---
 
-![](https://www.gravatar.com/avatar/359b69b8b365f5addbe220c7467e0d89?s=200
-)
+![](https://www.gravatar.com/avatar/359b69b8b365f5addbe220c7467e0d89?s=200)
 
 ## 🖥️ Machine Learning Engineer
 
