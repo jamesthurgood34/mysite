@@ -1,1 +1,1 @@
-Sitemap: https://jamesthurgood34.github.io/mysite/sitemap.xml
+Sitemap: https://jamesthurgood.com/sitemap.xml
