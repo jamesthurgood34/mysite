@@ -1,28 +1,32 @@
 ---
 date: "2025-03-21"
 layout: post
-title: "Why is everyone talking about MCP Servers"
-categories: [TBC]
-image: mandatory_ai_generated_image.jpg
+title: "A Hands-On Guide to MCP: Adding Search to Claude Before Anthropic Did"
+categories: [LLM, MCP, Claude, Docker]
+image: mandatory_ai_generated_image2.jpg
 ---
 
-Until [yesterday](https://www.anthropic.com/news/web-search), Claude was one of the few LLMs which didn't natively have a search capability. With LLMs having a knowledge cut off date based on their training data this is a massive limitation. Having search is key to ask questions on any current topic or recent development. I found myself going back to ChatGPT despite having a Claude Pro subscription for this reason. This gave me a perfect opportunity to try implementing a MCP server to add search as a tool which Claude could then use when I asked a query.
+Until [yesterday](https://www.anthropic.com/news/web-search), Claude was one of the few LLMs which didn't natively have a search capability. As use of LLMs becomes more normalised, we expect more of them, and limitations we previously accepted (e.g. a knowledge cut-off date) start to become unacceptable. This has been the case with Claude, as you have not been able to reference any recent new developments, and for me at least, this has started to become a real issue. I found myself going back to ChatGPT despite having a Claude Pro subscription for this reason. This gave me an opportunity to implement an MCP server to add search as a tool which Claude could then use when I asked a query, and I naturally wanted to share my experience via this blog.
 
-# What is MCP?
+# Introduction to MCP: A Bridge Between LLMs and Tools
 
-MCP stands for Model Context Protocol and was [launched by Anthropic in November of last year](https://www.anthropic.com/news/model-context-protocol). It's a standardized way for an LLM to interact with external tools. I'm sure you've thought while using an LLM, wouldn't it be great if I could use an LLM interact with some external website, e.g. Add an event to you google calendar. As with any protocol you have a client and a server, the client is attached to a chat application and the server is the component which interfaces with the external resource. It is possible to achieve this by coding your own software using an agentic framework like [Langgraph](https://www.langchain.com/langgraph) or [Pydantic AI](https://ai.pydantic.dev/) but these mean starting from scratch and implementing a feature from the ground up. The beauty of MCP, because it is standardized, you can connect it to a number of already existing clients, e.g. [Claude](https://modelcontextprotocol.io/quickstart/user), [Co-pilot](https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/introducing-model-context-protocol-mcp-in-copilot-studio-simplified-integration-with-ai-apps-and-agents) or any other client which can act as a MCP client. The same is true with servers, you can add as many as you like and easily open source and share them. Its modular by design, with a clearly define interface between tool and chat interface.
+MCP stands for Model Context Protocol and was [launched by Anthropic in November of last year](https://www.anthropic.com/news/model-context-protocol). It's a standardised way for an LLM to interact with external tools. Have you thought whilst using an LLM, wouldn't it be great if I could use an LLM to interact with some external website, e.g. add an event to your Google calendar?
 
-# Using MCP to enable Claude search
+As with any protocol, you have a client and a server; the client is attached to a chat application and the server is the component which interfaces with the external resource. It is possible to achieve this by coding your own software using an agentic framework like [Langgraph](https://www.langchain.com/langgraph) or [Pydantic AI](https://ai.pydantic.dev/), but these mean starting from scratch and implementing a feature from the ground up.
 
-To configure Claude to use a MCP server you'll need to follow these steps:
+The beauty of MCP is that, because it is standardised, you can connect it to a number of already existing clients, e.g. [Claude](https://modelcontextprotocol.io/quickstart/user), [Co-pilot](https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/introducing-model-context-protocol-mcp-in-copilot-studio-simplified-integration-with-ai-apps-and-agents) or any other client which can act as an MCP client. The same is true with servers; you can add as many as you like. They can often easily be open-sourced and shared as the services they connect to are used by many. The standard is modular by design, with a clearly defined interface between tool and chat interface.
 
-## 1. Build or reuse a Server
+# Implementing Claude Search: A Step-by-Step Guide
 
-[Anthropic in their initial announcement](https://www.anthropic.com/news/model-context-protocol) open-sourced a number of already built servers which you can find in [their GitHub repository](https://github.com/modelcontextprotocol/servers).
+To configure Claude to use an MCP server, you'll need to follow these steps:
+
+## 1. Setting Up Your MCP Server
+
+[Anthropic, in their initial announcement](https://www.anthropic.com/news/model-context-protocol), open-sourced a number of already built servers which you can find in [their GitHub repository](https://github.com/modelcontextprotocol/servers).
 
 Today we are going to implement one of these, the Brave-search MCP server. Brave Search is an independent search engine with its own index rather than relying on results from Google or Bing.
 
-To begin with we'll need to clone the repo to get the code base.
+To begin with, we'll need to clone the repo to get the code base.
 
 ``` bash
 git clone https://github.com/modelcontextprotocol/servers.git
@@ -34,61 +38,75 @@ From here you can see there are a number of implementations of various tools, sh
 docker build -t mcp/brave-search:latest -f src/brave-search/Dockerfile .
 ```
 
-With that we are done getting the MCP server ready, so next we can look at setting up brave search.
+With that, we are done getting the MCP server ready, so next we can look at setting up Brave Search.
 
-## 2. Getting the keys to Brave Search
+## 2. Acquiring Brave Search API Keys
 
-As our MCP server will be linking us to an external resource, Brave Search, we'll need to sign up to [Brave Search](https://brave.com/search/api/). In doing this you'll need to choose a plan and add your credit card details. Note you can use the free plan for this demo as it allows 2,000 queries for free. Once you are signed up you'll then be able to create an API key you'll want to copy and keep handy for the next step.
+As our MCP server will be linking us to an external resource, Brave Search, we'll need to sign up to [Brave Search](https://brave.com/search/api/). In doing this, you'll need to choose a plan and add your credit card details. Note that this shouldn't be an issue as you can use the free plan for this demo as it allows 2,000 queries for free. Once you are signed up, you'll then be able to create an API key you'll want to copy and keep handy for the next step.
 
-## 2. Configure Claude to use the server
+## 3. Configuring Claude Desktop
 
-To use MCP with Claude you need to [download claude desktop](https://claude.ai/download?ref=maginative.com) so that it can access the local MCP server on your machine. Once you have downloaded and logged in we'll next need to configure claude to use the server we created in step 1.
+To use MCP with Claude, you need to [download Claude desktop](https://claude.ai/download?ref=maginative.com) so that it can access the local MCP server on your machine. Once you have downloaded and logged in, we'll next need to configure Claude to use the server we created in step 1.
 
-Its worth noting, I'm on a Windows machine but use WSL for my development and this is where docker is installed. We'll need to take this into account when we are configuring claude, as the claude app is on the windows side. To configure the tool you'll need to create a in the following location `%APPDATA%\Claude\claude_desktop_config` and add he following:
+It's worth noting, I'm on a Windows machine but use WSL for my development, and this is where Docker is installed. We'll need to take this into account when we are configuring Claude, as the Claude app is on the Windows side. To configure the tool, you'll need to create a file in the following location `%APPDATA%\Claude\claude_desktop_config.json` and add the following:
+```json
+{
+  "mcpServers": {
+    "brave-search": {
+      "command": "wsl.exe",
+      "args": [
+        "bash",
+        "-c",
+        "docker run -i --rm -e BRAVE_API_KEY=<BRAVE_API_KEY> mcp/brave-search"
+      ]
+    }
+  }
+}
+```
 
-{ "mcpServers": { "brave-search": { "command": "wsl.exe", "args": \[ "bash", "-c", "docker run -i --rm -e BRAVE_API_KEY=<BRAVE_API_KEY> mcp/brave-search" \] } } }
+Where we have replaced `<BRAVE_API_KEY>` with the API key created in step 2. Notice our target of the command is WSL and not Docker, as we are calling Docker via WSL. With this, the configuration is done.
 
-Where we have replaced `<BRAVE_API_KEY>` with the API key created in step 2. Noitce are target of the command is WSL and not docker, as we are calling docker via WSL. With this the configuration is done.
+If the Claude app was open while you were doing this, you'll need to reboot it. Note it minimises to the taskbar, so be sure to right-click and quit to force it to restart.
 
-If the claude app was open while you were doing this you'll need to reboot it. Note it minimises to the task bar, so be sure to right click and quit to force it to restart.
-
-When you reopen the app you should see the following tool icon appear:
+When you reopen the app, you should see the following tool icon appear:
 
 ![](./tool_added.png)
 
-This indicates Claude has been able to start and connect to our MCP Server. On the occasions where you get the configuration wrong cluade will start but give you an error banner allowing you to click through and see the logs, so you can try and rectify the error.
+This indicates Claude has been able to start and connect to our MCP Server. On the occasions where you get the configuration wrong, Claude will start but give you an error banner allowing you to click through and see the logs, so you can try and rectify the error.
 
-You might be wondering why, adding one MCP server has added two tools. By clicking on the tool icon you get a description of the tools the MCP server(s) expose:
+You might be wondering why adding one MCP server has added two tools. By clicking on the tool icon, you get a description of the tools the MCP server(s) expose:
 
 ![](./brave_tools.png)
 
-## 3. Make use of your new tool
+## 4. Testing Your Search Tool
 
-With the tool now integrated we can now make use of it. If you are an F1 fan and missed last weekends race there are spoils below and given it was such a good race you should really watch it first.
+With the tool now integrated, we can now make use of it.
 
-Below we are asking Claude about some current F1 news:
+If you are an F1 fan and missed last weekend's race, there are spoilers below, and given it was such a good race, you should really watch it first.
+
+To test out this tool, let's ask Claude about some recent F1 news:
 
 ![](./intial_q.png)
 
-We can see here claude is able to determine that I am asking a question it can't answer based on its knowledge cutoff and therefore makes a call of the tool.
+We can see here Claude is able to determine that I am asking a question it can't answer based on its knowledge cutoff and therefore makes a call to the tool.
 
-At this point it asks for permission to use the tool, ensuring you the human are always in control.
+At this point, it asks for permission to use the tool, ensuring you, the human, are always in control.
 
 ![](./asking_for_auth.png)
 
-Once you give the permission we get the following response.
+Once you give the permission, we get the following response.
 
 ![](./f1_news.png)
 
-You can see it uses the `brave_web_search` tool as expected and gives us a correct summary of the race and would 100% agree with the comment about chaos!
+You can see it uses the `brave_web_search` tool as expected and gives us a correct summary of the race. I would 100% agree with the comment about chaos.
 
 The Claude app allows us to see the inner workings of the tool call. We can see the query that was sent off to Brave and the results that came back.
 
 ![](paste-1.png)
 
-# What's going on under the hood?
+# How MCP Works: Under the Hood
 
-Looking more closely at the source code we can see the following in the [index.ts](https://github.com/modelcontextprotocol/servers/blob/main/src/brave-search/index.ts), which is the `WEB_SEARCH_TOOL` object is defined with descriptions of both the tool and the inputs which will get passed to Claude so it knows what the tool can be used for and how to use it.
+Looking more closely at the source code, we can see the following in the [index.ts](https://github.com/modelcontextprotocol/servers/blob/main/src/brave-search/index.ts), where the `WEB_SEARCH_TOOL` object is defined with descriptions of both the tool and the inputs which will get passed to Claude so it knows what the tool can be used for and how to use it.
 
 ``` js
 const WEB_SEARCH_TOOL: Tool = {
@@ -121,26 +139,33 @@ const WEB_SEARCH_TOOL: Tool = {
 };
 ```
 
-This MCP server is just a couple hundred lines of code in a single file, with most of the logic written to interface with the Brave API. The simplicity is made possible by the Anthropic team creating MCP SDKs for many languages: [typescript](https://github.com/modelcontextprotocol/typescript-sdk), [python](https://github.com/modelcontextprotocol/python-sdk), [java](https://github.com/modelcontextprotocol/java-sdk), [rust](https://github.com/modelcontextprotocol/rust-sdk) etc.
+This MCP server is super simple. It's just a couple hundred lines of code in a single file, with most of the logic written to interface with the Brave API. The simplicity is made possible by the Anthropic team creating MCP SDKs for many languages: [typescript](https://github.com/modelcontextprotocol/typescript-sdk), [python](https://github.com/modelcontextprotocol/python-sdk), [java](https://github.com/modelcontextprotocol/java-sdk), [rust](https://github.com/modelcontextprotocol/rust-sdk), etc.
 
 What integration could you build?
 
-# What's possible?
+# Beyond Search: The Potential of MCP
 
-MCP servers give LLMs the ability to interact with a whole raft of external resources for example:
+MCP servers give LLMs the ability to interact with a whole raft of external resources, for example:
 
 -   **Database MCP server:** could allow users with no understanding of SQL the ability to search a database and create insights.
-
-<!-- -->
-
--   **File System MCP Server:** allowing the to access files on your local machine. No more copy and pasting when getting an LLM to review you docs. You could allow the server to edit files to allow you to collaboratively work on documents or software with an LLM
-
--   **Code Repository MCP Server**: you can integrate with code repositories like github to enable an LLM to review your code, or with some other tools to, take an issue, write some code and submit a PR!
-
+-   **File System MCP Server:** allowing it to access files on your local machine. No more copy and pasting when getting an LLM to review your docs. You could allow the server to edit files to enable collaborative work on documents or software with an LLM.
+-   **Code Repository MCP Server:** you can integrate with code repositories like GitHub to enable an LLM to review your code, or with some other tools to take an issue, write some code and submit a PR!
 -   **Calendar/Task Management MCP Server:** Allow the LLM to be a true assistant by giving it access to your calendar or to-do list app.
 
 The possibilities are only limited by your imagination.
 
-# Whats the catch?
+# What's the catch?
 
-You'll notice everything in this blog is local and that's for a good reason, MCP currently has no way to authenticate. This is one of the key items on the [roadmap](https://modelcontextprotocol.io/development/roadmap) and topic of discussion. You'll notice authentication is under **remote MCP support**. Its possible to see an agentic future where its standard practice for applications to expose a MCP server alongside their main UI. It will just be like writing some custom application using a sites API but rather your LLM will be able to do this for you.
+You'll notice everything in this blog is local, and that's for a good reason: MCP currently has no way to authenticate. This is one of the key items on the [roadmap](https://modelcontextprotocol.io/development/roadmap) and topic of discussion. You'll notice authentication is under **remote MCP support**. Once this is implemented, it's possible to see an agentic future where it's standard practice for applications to expose an MCP server alongside their main UI. It will just be like using a site's API, but rather than you having to code all the interactions, your LLM will be able to do this for you.
+
+There are a number of other items on the [roadmap](https://modelcontextprotocol.io/development/roadmap), and the community is starting to converge around this standard. It's an exciting time; let's see where the open source community takes this in the coming years!
+
+# The Future is Here: Building Your Own AI Tools
+
+MCP represents an exciting step forward for LLMs by standardising how AI models interact with external tools. Rather than everyone building custom solutions from scratch, Anthropic has created a modular ecosystem of reusable components.
+
+What excites me most is how MCP transforms Claude from a conversational AI into a true assistant that can take actions in the digital world. As the ecosystem grows and authentication challenges are solved, we'll likely see hundreds of tools extending what our AI assistants can do.
+
+The foundation being built here is promising, despite current limitations around authentication for remote services. I encourage you to experiment with building your own MCP servers or adapting existing ones to your needs.
+
+Have you tried MCP with Claude or another AI assistant? What tools would you like to see integrated?
