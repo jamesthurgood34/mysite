@@ -10,7 +10,347 @@
 <atom:link href="https://jamesthurgood.com/feed.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.6.42</generator>
-<lastBuildDate>Sun, 02 Feb 2025 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 21 Mar 2025 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>A Hands-On Guide to MCP: Adding Search to Claude Before Anthropic Did</title>
+  <dc:creator>James Thurgood</dc:creator>
+  <link>https://jamesthurgood.com/blog/posts/MCP_servers/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Until <a href="https://www.anthropic.com/news/web-search">yesterday</a>, Claude was one of the few LLMs which didn’t natively have a search capability. As use of LLMs becomes more normalised, we expect more of them, and limitations we previously accepted (e.g.&nbsp;a knowledge cut-off date) start to become unacceptable. This has been the case with Claude, as you have not been able to reference any recent new developments, and for me at least, this has started to become a real issue. I found myself going back to ChatGPT despite having a Claude Pro subscription for this reason. This gave me an opportunity to implement an MCP server to add search as a tool which Claude could then use when I asked a query, and I naturally wanted to share my experience via this blog.</p>
+<section id="introduction-to-mcp-a-bridge-between-llms-and-tools" class="level1">
+<h1>Introduction to MCP: A Bridge Between LLMs and Tools</h1>
+<p>MCP stands for Model Context Protocol and was <a href="https://www.anthropic.com/news/model-context-protocol">launched by Anthropic in November of last year</a>. It’s a standardised way for an LLM to interact with external tools. Have you thought whilst using an LLM, wouldn’t it be great if I could use an LLM to interact with some external website, e.g.&nbsp;add an event to your Google calendar?</p>
+<p>As with any protocol, you have a client and a server; the client is attached to a chat application and the server is the component which interfaces with the external resource. It is possible to achieve this by coding your own software using an agentic framework like <a href="https://www.langchain.com/langgraph">Langgraph</a> or <a href="https://ai.pydantic.dev/">Pydantic AI</a>, but these mean starting from scratch and implementing a feature from the ground up.</p>
+<p>The beauty of MCP is that, because it is standardised, you can connect it to a number of already existing clients, e.g.&nbsp;<a href="https://modelcontextprotocol.io/quickstart/user">Claude</a>, <a href="https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/introducing-model-context-protocol-mcp-in-copilot-studio-simplified-integration-with-ai-apps-and-agents">Co-pilot</a> or any other client which can act as an MCP client. The same is true with servers; you can add as many as you like. They can often easily be open-sourced and shared as the services they connect to are used by many. The standard is modular by design, with a clearly defined interface between tool and chat interface.</p>
+</section>
+<section id="implementing-claude-search-a-step-by-step-guide" class="level1">
+<h1>Implementing Claude Search: A Step-by-Step Guide</h1>
+<p>To configure Claude to use an MCP server, you’ll need to follow these steps:</p>
+<section id="setting-up-your-mcp-server" class="level2">
+<h2 class="anchored" data-anchor-id="setting-up-your-mcp-server">1. Setting Up Your MCP Server</h2>
+<p><a href="https://www.anthropic.com/news/model-context-protocol">Anthropic, in their initial announcement</a>, open-sourced a number of already built servers which you can find in <a href="https://github.com/modelcontextprotocol/servers">their GitHub repository</a>.</p>
+<p>Today we are going to implement one of these, the Brave-search MCP server. Brave Search is an independent search engine with its own index rather than relying on results from Google or Bing.</p>
+<p>To begin with, we’ll need to clone the repo to get the code base.</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> clone https://github.com/modelcontextprotocol/servers.git</span></code></pre></div>
+<p>From here you can see there are a number of implementations of various tools, showing the versatility of MCP. We’ll be using <code>/src/brave-search</code> so we can build the image with:</p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">docker</span> build <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-t</span> mcp/brave-search:latest <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-f</span> src/brave-search/Dockerfile .</span></code></pre></div>
+<p>With that, we are done getting the MCP server ready, so next we can look at setting up Brave Search.</p>
+</section>
+<section id="acquiring-brave-search-api-keys" class="level2">
+<h2 class="anchored" data-anchor-id="acquiring-brave-search-api-keys">2. Acquiring Brave Search API Keys</h2>
+<p>As our MCP server will be linking us to an external resource, Brave Search, we’ll need to sign up to <a href="https://brave.com/search/api/">Brave Search</a>. In doing this, you’ll need to choose a plan and add your credit card details. Note that this shouldn’t be an issue as you can use the free plan for this demo as it allows 2,000 queries for free. Once you are signed up, you’ll then be able to create an API key you’ll want to copy and keep handy for the next step.</p>
+</section>
+<section id="configuring-claude-desktop" class="level2">
+<h2 class="anchored" data-anchor-id="configuring-claude-desktop">3. Configuring Claude Desktop</h2>
+<p>To use MCP with Claude, you need to <a href="https://claude.ai/download?ref=maginative.com">download Claude desktop</a> so that it can access the local MCP server on your machine. Once you have downloaded and logged in, we’ll next need to configure Claude to use the server we created in step 1.</p>
+<p>It’s worth noting, I’m on a Windows machine but use WSL for my development, and this is where Docker is installed. We’ll need to take this into account when we are configuring Claude, as the Claude app is on the Windows side. To configure the tool, you’ll need to create a file in the following location <code>%APPDATA%\Claude\claude_desktop_config.json</code> and add the following:</p>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb3-2">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"mcpServers"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb3-3">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"brave-search"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb3-4">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"command"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"wsl.exe"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb3-5">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"args"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">[</span></span>
+<span id="cb3-6">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"bash"</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb3-7">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"-c"</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb3-8">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"docker run -i --rm -e BRAVE_API_KEY=&lt;BRAVE_API_KEY&gt; mcp/brave-search"</span></span>
+<span id="cb3-9">      <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">]</span></span>
+<span id="cb3-10">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span>
+<span id="cb3-11">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span>
+<span id="cb3-12"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span></code></pre></div>
+<p>Where we have replaced <code>&lt;BRAVE_API_KEY&gt;</code> with the API key created in step 2. Notice our target of the command is WSL and not Docker, as we are calling Docker via WSL. With this, the configuration is done.</p>
+<p>If the Claude app was open while you were doing this, you’ll need to reboot it. Note it minimises to the taskbar, so be sure to right-click and quit to force it to restart.</p>
+<p>When you reopen the app, you should see the following tool icon appear:</p>
+<p><img src="https://jamesthurgood.com/blog/posts/MCP_servers/tool_added.png" class="img-fluid"></p>
+<p>This indicates Claude has been able to start and connect to our MCP Server. On the occasions where you get the configuration wrong, Claude will start but give you an error banner allowing you to click through and see the logs, so you can try and rectify the error.</p>
+<p>You might be wondering why adding one MCP server has added two tools. By clicking on the tool icon, you get a description of the tools the MCP server(s) expose:</p>
+<p><img src="https://jamesthurgood.com/blog/posts/MCP_servers/brave_tools.png" class="img-fluid"></p>
+</section>
+<section id="testing-your-search-tool" class="level2">
+<h2 class="anchored" data-anchor-id="testing-your-search-tool">4. Testing Your Search Tool</h2>
+<p>With the tool now integrated, we can now make use of it.</p>
+<p>If you are an F1 fan and missed last weekend’s race, there are spoilers below, and given it was such a good race, you should really watch it first.</p>
+<p>To test out this tool, let’s ask Claude about some recent F1 news:</p>
+<p><img src="https://jamesthurgood.com/blog/posts/MCP_servers/intial_q.png" class="img-fluid"></p>
+<p>We can see here Claude is able to determine that I am asking a question it can’t answer based on its knowledge cutoff and therefore makes a call to the tool.</p>
+<p>At this point, it asks for permission to use the tool, ensuring you, the human, are always in control.</p>
+<p><img src="https://jamesthurgood.com/blog/posts/MCP_servers/asking_for_auth.png" class="img-fluid"></p>
+<p>Once you give the permission, we get the following response.</p>
+<p><img src="https://jamesthurgood.com/blog/posts/MCP_servers/f1_news.png" class="img-fluid"></p>
+<p>You can see it uses the <code>brave_web_search</code> tool as expected and gives us a correct summary of the race. I would 100% agree with the comment about chaos.</p>
+<p>The Claude app allows us to see the inner workings of the tool call. We can see the query that was sent off to Brave and the results that came back.</p>
+<p><img src="https://jamesthurgood.com/blog/posts/MCP_servers/paste-1.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="how-mcp-works-under-the-hood" class="level1">
+<h1>How MCP Works: Under the Hood</h1>
+<p>Looking more closely at the source code, we can see the following in the <a href="https://github.com/modelcontextprotocol/servers/blob/main/src/brave-search/index.ts">index.ts</a>, where the <code>WEB_SEARCH_TOOL</code> object is defined with descriptions of both the tool and the inputs which will get passed to Claude so it knows what the tool can be used for and how to use it.</p>
+<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">const</span> WEB_SEARCH_TOOL<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span> Tool <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> {</span>
+<span id="cb4-2">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">name</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"brave_web_search"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb4-3">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">description</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb4-4">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Performs a web search using the Brave Search API, ideal for general queries, news, articles, and online content. "</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb4-5">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Use this for broad information gathering, recent events, or when you need diverse web sources. "</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb4-6">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Supports pagination, content filtering, and freshness controls. "</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb4-7">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Maximum 20 results per request, with offset for pagination. "</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb4-8">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">inputSchema</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span> {</span>
+<span id="cb4-9">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">type</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"object"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb4-10">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">properties</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span> {</span>
+<span id="cb4-11">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">query</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span> {</span>
+<span id="cb4-12">        <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">type</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"string"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb4-13">        <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">description</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Search query (max 400 chars, 50 words)"</span></span>
+<span id="cb4-14">      }<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb4-15">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">count</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span> {</span>
+<span id="cb4-16">        <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">type</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"number"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb4-17">        <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">description</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Number of results (1-20, default 10)"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb4-18">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">default</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span></span>
+<span id="cb4-19">      }<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb4-20">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">offset</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span> {</span>
+<span id="cb4-21">        <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">type</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"number"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb4-22">        <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">description</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Pagination offset (max 9, default 0)"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb4-23">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">default</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span></span>
+<span id="cb4-24">      }<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb4-25">    }<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb4-26">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">required</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span> [<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"query"</span>]<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb4-27">  }<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb4-28">}<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span></code></pre></div>
+<p>This MCP server is super simple. It’s just a couple hundred lines of code in a single file, with most of the logic written to interface with the Brave API. The simplicity is made possible by the Anthropic team creating MCP SDKs for many languages: <a href="https://github.com/modelcontextprotocol/typescript-sdk">typescript</a>, <a href="https://github.com/modelcontextprotocol/python-sdk">python</a>, <a href="https://github.com/modelcontextprotocol/java-sdk">java</a>, <a href="https://github.com/modelcontextprotocol/rust-sdk">rust</a>, etc.</p>
+<p>What integration could you build?</p>
+</section>
+<section id="beyond-search-the-potential-of-mcp" class="level1">
+<h1>Beyond Search: The Potential of MCP</h1>
+<p>MCP servers give LLMs the ability to interact with a whole raft of external resources, for example:</p>
+<ul>
+<li><strong>Database MCP server:</strong> could allow users with no understanding of SQL the ability to search a database and create insights.</li>
+<li><strong>File System MCP Server:</strong> allowing it to access files on your local machine. No more copy and pasting when getting an LLM to review your docs. You could allow the server to edit files to enable collaborative work on documents or software with an LLM.</li>
+<li><strong>Code Repository MCP Server:</strong> you can integrate with code repositories like GitHub to enable an LLM to review your code, or with some other tools to take an issue, write some code and submit a PR!</li>
+<li><strong>Calendar/Task Management MCP Server:</strong> Allow the LLM to be a true assistant by giving it access to your calendar or to-do list app.</li>
+</ul>
+<p>The possibilities are only limited by your imagination.</p>
+</section>
+<section id="whats-the-catch" class="level1">
+<h1>What’s the catch?</h1>
+<p>You’ll notice everything in this blog is local, and that’s for a good reason: MCP currently has no way to authenticate. This is one of the key items on the <a href="https://modelcontextprotocol.io/development/roadmap">roadmap</a> and topic of discussion. You’ll notice authentication is under <strong>remote MCP support</strong>. Once this is implemented, it’s possible to see an agentic future where it’s standard practice for applications to expose an MCP server alongside their main UI. It will just be like using a site’s API, but rather than you having to code all the interactions, your LLM will be able to do this for you.</p>
+<p>There are a number of other items on the <a href="https://modelcontextprotocol.io/development/roadmap">roadmap</a>, and the community is starting to converge around this standard. It’s an exciting time; let’s see where the open source community takes this in the coming years!</p>
+</section>
+<section id="the-future-is-here-building-your-own-ai-tools" class="level1">
+<h1>The Future is Here: Building Your Own AI Tools</h1>
+<p>MCP represents an exciting step forward for LLMs by standardising how AI models interact with external tools. Rather than everyone building custom solutions from scratch, Anthropic has created a modular ecosystem of reusable components.</p>
+<p>What excites me most is how MCP transforms Claude from a conversational AI into a true assistant that can take actions in the digital world. As the ecosystem grows and authentication challenges are solved, we’ll likely see hundreds of tools extending what our AI assistants can do.</p>
+<p>The foundation being built here is promising, despite current limitations around authentication for remote services. I encourage you to experiment with building your own MCP servers or adapting existing ones to your needs.</p>
+<p>Have you tried MCP with Claude or another AI assistant? What tools would you like to see integrated?</p>
+
+
+</section>
+
+ ]]></description>
+  <category>LLM</category>
+  <category>MCP</category>
+  <category>Claude</category>
+  <category>Docker</category>
+  <guid>https://jamesthurgood.com/blog/posts/MCP_servers/</guid>
+  <pubDate>Fri, 21 Mar 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://jamesthurgood.com/blog/posts/MCP_servers/mandatory_ai_generated_image2.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Replicating DeepSeek’s Breakthrough on a Budget: How RL Transforms Tiny Models into Thinkers</title>
   <dc:creator>James Thurgood</dc:creator>

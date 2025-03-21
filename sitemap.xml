@@ -2,22 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jamesthurgood.com/mystack/mystack.html</loc>
-    <lastmod>2025-02-26T21:04:52.812Z</lastmod>
+    <lastmod>2025-03-21T00:01:48.694Z</lastmod>
   </url>
   <url>
     <loc>https://jamesthurgood.com/blog/blog.html</loc>
-    <lastmod>2025-02-26T21:04:52.800Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jamesthurgood.com/home/index.html</loc>
-    <lastmod>2025-02-26T21:04:52.811Z</lastmod>
+    <lastmod>2025-03-21T00:01:48.676Z</lastmod>
   </url>
   <url>
     <loc>https://jamesthurgood.com/blog/posts/Replicating_DeepSeeks_Breakthrough_on_a_Budget/index.html</loc>
-    <lastmod>2025-02-26T21:04:52.807Z</lastmod>
+    <lastmod>2025-03-21T00:01:48.690Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jamesthurgood.com/home/index.html</loc>
+    <lastmod>2025-03-21T00:01:48.694Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jamesthurgood.com/blog/posts/MCP_servers/index.html</loc>
+    <lastmod>2025-03-21T00:01:48.678Z</lastmod>
   </url>
   <url>
     <loc>https://jamesthurgood.com/feed.html</loc>
-    <lastmod>2025-02-26T21:04:52.811Z</lastmod>
+    <lastmod>2025-03-21T00:01:48.694Z</lastmod>
   </url>
 </urlset>
