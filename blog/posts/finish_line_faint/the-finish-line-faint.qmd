@@ -6,6 +6,7 @@ race: "West Highland Way, 157km"
 finish_time: "23:30"
 date: 2026-06-22
 tags: [ultrarunning, physiology, trail-running, west-highland-way]
+image: IMG-20260620-WA0011.jpg
 ---
 
 # Crossing the Line, Then the Floor
