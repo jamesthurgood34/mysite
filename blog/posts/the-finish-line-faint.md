@@ -1,0 +1,80 @@
+---
+title: "Crossing the Line, Then the Floor"
+subtitle: "Why runners faint after the finish, and how to stay on your feet"
+category: "Physiology"
+race: "West Highland Way, 157km"
+finish_time: "23:30"
+date: 2026-06-22
+tags: [ultrarunning, physiology, trail-running, west-highland-way]
+---
+
+# Crossing the Line, Then the Floor
+
+*Plenty of trail runners have seen it, and a few have lived it: the finisher who completes a brutal day on their feet, sits down, and promptly passes out. It looks alarming. It is usually nothing of the sort. Here is what is actually going on, told through my own collapse at the end of a 157km race.*
+
+**Case study:** West Highland Way, 157km · **Finish time:** 23:30 · **Subject:** The post-exertional faint
+
+---
+
+I had run for twenty-three and a half hours. I crossed the line in good shape, finished strong, and was handed a cup of tea. I took a couple of sips, started to feel sick, put my head between my knees, and the next thing I knew I was on the ground with people standing over me. I had been out for about a minute. I had gone, in the words of one onlooker, the colour of someone hauled up from the bottom of the sea. Within moments of my legs being lifted I began to come back, but it took the better part of an hour before I felt steady on my own.
+
+If you have spent any time around the finish of a long ultra, this scene will be familiar. It is one of the most common medical events at endurance finishes, and to the people watching it can look frightening. Yet in the overwhelming majority of cases it is not a sign of anything sinister. It is simple cardiovascular physiology, entirely predictable once you understand the mechanism, and largely preventable once you know the trick. So let me take my own collapse apart and show you what happened.
+
+## Your legs are a second heart
+
+While you run, the muscles in your legs do something your circulation depends on. Every stride squeezes the deep veins and pushes blood back up towards your chest, against gravity. This is the **skeletal muscle pump**, and during hard exercise it does a huge amount of the work of returning blood to your heart so it can be pumped round again. At the same time, your blood vessels are dilated wide open, partly to flood the working muscles with oxygen, partly to carry heat to the skin so you do not overheat.
+
+So a running body is a finely balanced system: vessels wide open, heart filling well, and the leg-muscle pump driving the whole thing round. Then the runner stops. And every part of that balance falls apart at once.
+
+## The moment the brakes come on
+
+The instant you stop running, the muscle pump switches off. But your blood vessels are still dilated wide. You now have a large, relaxed reservoir of blood sitting in your legs, gravity pulling it downward, and nothing pumping it back up. Blood pools in the lower body. Less returns to the heart, so each beat ejects less, and the pressure reaching the brain falls. This is **post-exercise hypotension**, and after an ultra it is dramatic.
+
+In my case, this effect was made far worse by how I finished. I did not jog it in. Having averaged around 9:00 per kilometre across the whole race, I ran the final kilometre at under 6:00, with my heart rate climbing back into the 160s, and then came to a halt and sat down within a minute or two.
+
+| Metric | Value |
+| --- | --- |
+| Average pace across the race | 9:00 min/km |
+| Pace for the final kilometre | 5:47 min/km |
+| Heart rate at the line | 162 bpm (up from ~141) |
+
+That contrast is the heart of the problem. A flat-out finish leaves the cardiovascular system in a high-output, wide-open state. To then stop dead and sit removes the muscle pump at the precise moment the circulation is most reliant on it. The harder the finish and the more sudden the stop, the harder the crash.
+
+## Why the heart makes it worse, not better
+
+Here a second mechanism often stacks on top, and it is a strange one. Faced with a heart that is beating vigorously but filling poorly, the body can trigger a reflex called the **vasovagal response**. Counterintuitively, it slows the heart down and dilates the blood vessels even further, dropping blood pressure lower still. It is the nervous system misreading the situation and doing the opposite of what is needed. This is the lurch where I felt suddenly sick and clammy, went pale, and tipped over. Nausea and that washed-out grey pallor are its calling cards.
+
+## The grey face, explained
+
+That pallor is worth a moment, because it seems to contradict the idea of dilated vessels. On a hot day, after all, dilated skin vessels make your face flush red. So why does a fainting runner go pale?
+
+Because the dilation and the pallor are happening in different places. The vessels filling up are the deep veins of the core, gut and legs, where blood is pooling. Meanwhile the body, scrambling to protect what blood pressure it has left, actively shunts blood away from the skin. The surface vessels empty out. A red face on a hot day is blood being delivered to the skin to lose heat. A faint's grey pallor is blood being pulled away from the skin because pressure has collapsed and the body is hoarding circulation for the brain. Both involve vasodilation somewhere, with opposite effects at the surface. Add the cold sweat of the stress response and you get the classic pre-faint look: pale, grey, cool and clammy.
+
+> "Fainting is not the emergency. Fainting is the body solving the emergency."
+
+## The faint is the fix
+
+Here is the part that reframes the whole event. The collapse is not the body failing. It is the body correcting itself. The moment you lose consciousness, you fall, and going from upright to flat removes gravity from the equation. Lying down, blood flows freely back to the heart and brain again. Raising the legs, as the people around me did, empties the pooled blood out of the lower body even faster. That is why I started to come round within seconds of being horizontal. The brain engineered the one position that would restore its own blood supply.
+
+Getting back to normal takes longer than getting back to consciousness. Lying flat restores blood flow instantly, but rebuilding stable blood pressure means the pressure sensors in the neck firing the nervous system back up, heart rate and vessel tone recovering, and circulation redistributing. After twenty-three hours of racing, that is a deep hole, which is why it took me the better part of an hour to feel genuinely steady rather than a few minutes.
+
+## What it was not
+
+It is tempting to blame dehydration for any endurance collapse, but it does not always fit, and here it did not. I was well fuelled and well watered, having taken on several litres of fluid and a steady stream of electrolyte drink across the race. The trigger was not an empty tank of fluid. It was mechanical: a near-maximal finish followed immediately by sitting still. Long races do drain the reserves the body would otherwise use to buffer the swing, which is why these faints cluster at ultra finishes rather than at the end of a parkrun. But the thing that tipped it over was the abrupt transition from hard running to stationary.
+
+## How to keep yourself off the floor
+
+The encouraging news for any trail runner is that the finish-line faint is one of the more avoidable misfortunes in the sport. It comes down to managing the last few minutes better.
+
+**Staying on your feet at the finish**
+
+- **Ease off slightly in the final stretch.** A flat-out sprint finish puts your circulation into a wide-open, high-output state at the worst possible moment. You do not have to crawl in, but easing the very last effort makes the post-finish drop far gentler.
+- **Whatever you do, keep walking.** This is the single most effective habit. Do not stop dead and do not sit down straight away. Walk gently for five to ten minutes past the line. That keeps the muscle pump working while your vessels tighten back up, so the system stands down slowly instead of crashing.
+- **Know the warning signs, and act fast.** Light-headedness, nausea, tunnel vision, a clammy sweat or going pale are the cues. If they hit, get flat on the ground with your legs raised immediately. Lying down with legs up is far better than sitting with your head between your knees, and it is exactly what reverses the problem.
+- **Brief whoever is crewing you.** The natural instinct of a helper is to guide a wobbly finisher to a chair. The better move is to keep them walking, and if they go down, to lift their legs. A crew that knows this can stop a faint before it starts.
+
+I recovered fully and was fine. I also learned something the previous 157 kilometres had not taught me: in an ultra, how you stop matters almost as much as how you run. Cross the line, by all means savour it, but stay on your feet a little longer before you sit down. Your blood pressure will thank you.
+
+* * *
+
+Please note this article was written by Claude and is a summary of the research I codnucted on this topic. As I am not a medical professional treat all claims within this as unverified.
