@@ -9,8 +9,101 @@
 <link>https://jamesthurgood.com/blog/blog.html</link>
 <atom:link href="https://jamesthurgood.com/blog/blog.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.6.42</generator>
-<lastBuildDate>Fri, 21 Mar 2025 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.9.38</generator>
+<lastBuildDate>Mon, 22 Jun 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Crossing the Line, Then the Floor</title>
+  <dc:creator>James Thurgood</dc:creator>
+  <link>https://jamesthurgood.com/blog/posts/the-finish-line-faint.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="crossing-the-line-then-the-floor" class="level1">
+<h1>Crossing the Line, Then the Floor</h1>
+<p><em>Plenty of trail runners have seen it, and a few have lived it: the finisher who completes a brutal day on their feet, sits down, and promptly passes out. It looks alarming. It is usually nothing of the sort. Here is what is actually going on, told through my own collapse at the end of a 157km race.</em></p>
+<p><strong>Case study:</strong> West Highland Way, 157km · <strong>Finish time:</strong> 23:30 · <strong>Subject:</strong> The post-exertional faint</p>
+<hr>
+<p>I had run for twenty-three and a half hours. I crossed the line in good shape, finished strong, and was handed a cup of tea. I took a couple of sips, started to feel sick, put my head between my knees, and the next thing I knew I was on the ground with people standing over me. I had been out for about a minute. I had gone, in the words of one onlooker, the colour of someone hauled up from the bottom of the sea. Within moments of my legs being lifted I began to come back, but it took the better part of an hour before I felt steady on my own.</p>
+<p>If you have spent any time around the finish of a long ultra, this scene will be familiar. It is one of the most common medical events at endurance finishes, and to the people watching it can look frightening. Yet in the overwhelming majority of cases it is not a sign of anything sinister. It is simple cardiovascular physiology, entirely predictable once you understand the mechanism, and largely preventable once you know the trick. So let me take my own collapse apart and show you what happened.</p>
+<section id="your-legs-are-a-second-heart" class="level2">
+<h2 class="anchored" data-anchor-id="your-legs-are-a-second-heart">Your legs are a second heart</h2>
+<p>While you run, the muscles in your legs do something your circulation depends on. Every stride squeezes the deep veins and pushes blood back up towards your chest, against gravity. This is the <strong>skeletal muscle pump</strong>, and during hard exercise it does a huge amount of the work of returning blood to your heart so it can be pumped round again. At the same time, your blood vessels are dilated wide open, partly to flood the working muscles with oxygen, partly to carry heat to the skin so you do not overheat.</p>
+<p>So a running body is a finely balanced system: vessels wide open, heart filling well, and the leg-muscle pump driving the whole thing round. Then the runner stops. And every part of that balance falls apart at once.</p>
+</section>
+<section id="the-moment-the-brakes-come-on" class="level2">
+<h2 class="anchored" data-anchor-id="the-moment-the-brakes-come-on">The moment the brakes come on</h2>
+<p>The instant you stop running, the muscle pump switches off. But your blood vessels are still dilated wide. You now have a large, relaxed reservoir of blood sitting in your legs, gravity pulling it downward, and nothing pumping it back up. Blood pools in the lower body. Less returns to the heart, so each beat ejects less, and the pressure reaching the brain falls. This is <strong>post-exercise hypotension</strong>, and after an ultra it is dramatic.</p>
+<p>In my case, this effect was made far worse by how I finished. I did not jog it in. Having averaged around 9:00 per kilometre across the whole race, I ran the final kilometre at under 6:00, with my heart rate climbing back into the 160s, and then came to a halt and sat down within a minute or two.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Average pace across the race</td>
+<td>9:00 min/km</td>
+</tr>
+<tr class="even">
+<td>Pace for the final kilometre</td>
+<td>5:47 min/km</td>
+</tr>
+<tr class="odd">
+<td>Heart rate at the line</td>
+<td>162 bpm (up from ~141)</td>
+</tr>
+</tbody>
+</table>
+<p>That contrast is the heart of the problem. A flat-out finish leaves the cardiovascular system in a high-output, wide-open state. To then stop dead and sit removes the muscle pump at the precise moment the circulation is most reliant on it. The harder the finish and the more sudden the stop, the harder the crash.</p>
+</section>
+<section id="why-the-heart-makes-it-worse-not-better" class="level2">
+<h2 class="anchored" data-anchor-id="why-the-heart-makes-it-worse-not-better">Why the heart makes it worse, not better</h2>
+<p>Here a second mechanism often stacks on top, and it is a strange one. Faced with a heart that is beating vigorously but filling poorly, the body can trigger a reflex called the <strong>vasovagal response</strong>. Counterintuitively, it slows the heart down and dilates the blood vessels even further, dropping blood pressure lower still. It is the nervous system misreading the situation and doing the opposite of what is needed. This is the lurch where I felt suddenly sick and clammy, went pale, and tipped over. Nausea and that washed-out grey pallor are its calling cards.</p>
+</section>
+<section id="the-grey-face-explained" class="level2">
+<h2 class="anchored" data-anchor-id="the-grey-face-explained">The grey face, explained</h2>
+<p>That pallor is worth a moment, because it seems to contradict the idea of dilated vessels. On a hot day, after all, dilated skin vessels make your face flush red. So why does a fainting runner go pale?</p>
+<p>Because the dilation and the pallor are happening in different places. The vessels filling up are the deep veins of the core, gut and legs, where blood is pooling. Meanwhile the body, scrambling to protect what blood pressure it has left, actively shunts blood away from the skin. The surface vessels empty out. A red face on a hot day is blood being delivered to the skin to lose heat. A faint’s grey pallor is blood being pulled away from the skin because pressure has collapsed and the body is hoarding circulation for the brain. Both involve vasodilation somewhere, with opposite effects at the surface. Add the cold sweat of the stress response and you get the classic pre-faint look: pale, grey, cool and clammy.</p>
+<blockquote class="blockquote">
+<p>“Fainting is not the emergency. Fainting is the body solving the emergency.”</p>
+</blockquote>
+</section>
+<section id="the-faint-is-the-fix" class="level2">
+<h2 class="anchored" data-anchor-id="the-faint-is-the-fix">The faint is the fix</h2>
+<p>Here is the part that reframes the whole event. The collapse is not the body failing. It is the body correcting itself. The moment you lose consciousness, you fall, and going from upright to flat removes gravity from the equation. Lying down, blood flows freely back to the heart and brain again. Raising the legs, as the people around me did, empties the pooled blood out of the lower body even faster. That is why I started to come round within seconds of being horizontal. The brain engineered the one position that would restore its own blood supply.</p>
+<p>Getting back to normal takes longer than getting back to consciousness. Lying flat restores blood flow instantly, but rebuilding stable blood pressure means the pressure sensors in the neck firing the nervous system back up, heart rate and vessel tone recovering, and circulation redistributing. After twenty-three hours of racing, that is a deep hole, which is why it took me the better part of an hour to feel genuinely steady rather than a few minutes.</p>
+</section>
+<section id="what-it-was-not" class="level2">
+<h2 class="anchored" data-anchor-id="what-it-was-not">What it was not</h2>
+<p>It is tempting to blame dehydration for any endurance collapse, but it does not always fit, and here it did not. I was well fuelled and well watered, having taken on several litres of fluid and a steady stream of electrolyte drink across the race. The trigger was not an empty tank of fluid. It was mechanical: a near-maximal finish followed immediately by sitting still. Long races do drain the reserves the body would otherwise use to buffer the swing, which is why these faints cluster at ultra finishes rather than at the end of a parkrun. But the thing that tipped it over was the abrupt transition from hard running to stationary.</p>
+</section>
+<section id="how-to-keep-yourself-off-the-floor" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-keep-yourself-off-the-floor">How to keep yourself off the floor</h2>
+<p>The encouraging news for any trail runner is that the finish-line faint is one of the more avoidable misfortunes in the sport. It comes down to managing the last few minutes better.</p>
+<p><strong>Staying on your feet at the finish</strong></p>
+<ul>
+<li><strong>Ease off slightly in the final stretch.</strong> A flat-out sprint finish puts your circulation into a wide-open, high-output state at the worst possible moment. You do not have to crawl in, but easing the very last effort makes the post-finish drop far gentler.</li>
+<li><strong>Whatever you do, keep walking.</strong> This is the single most effective habit. Do not stop dead and do not sit down straight away. Walk gently for five to ten minutes past the line. That keeps the muscle pump working while your vessels tighten back up, so the system stands down slowly instead of crashing.</li>
+<li><strong>Know the warning signs, and act fast.</strong> Light-headedness, nausea, tunnel vision, a clammy sweat or going pale are the cues. If they hit, get flat on the ground with your legs raised immediately. Lying down with legs up is far better than sitting with your head between your knees, and it is exactly what reverses the problem.</li>
+<li><strong>Brief whoever is crewing you.</strong> The natural instinct of a helper is to guide a wobbly finisher to a chair. The better move is to keep them walking, and if they go down, to lift their legs. A crew that knows this can stop a faint before it starts.</li>
+</ul>
+<p>I recovered fully and was fine. I also learned something the previous 157 kilometres had not taught me: in an ultra, how you stop matters almost as much as how you run. Cross the line, by all means savour it, but stay on your feet a little longer before you sit down. Your blood pressure will thank you.</p>
+<hr>
+<p>Please note this article was written by Claude and is a summary of the research I codnucted on this topic. As I am not a medical professional treat all claims within this as unverified.</p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <guid>https://jamesthurgood.com/blog/posts/the-finish-line-faint.html</guid>
+  <pubDate>Mon, 22 Jun 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>A Hands-On Guide to MCP: Adding Search to Claude Before Anthropic Did</title>
   <dc:creator>James Thurgood</dc:creator>
@@ -36,17 +129,17 @@
 <p><a href="https://www.anthropic.com/news/model-context-protocol">Anthropic, in their initial announcement</a>, open-sourced a number of already built servers which you can find in <a href="https://github.com/modelcontextprotocol/servers">their GitHub repository</a>.</p>
 <p>Today we are going to implement one of these, the Brave-search MCP server. Brave Search is an independent search engine with its own index rather than relying on results from Google or Bing.</p>
 <p>To begin with, we’ll need to clone the repo to get the code base.</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">git</span> clone https://github.com/modelcontextprotocol/servers.git</span></code></pre></div>
+font-style: inherit;">git</span> clone https://github.com/modelcontextprotocol/servers.git</span></code></pre></div></div>
 <p>From here you can see there are a number of implementations of various tools, showing the versatility of MCP. We’ll be using <code>/src/brave-search</code> so we can build the image with:</p>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="ex" style="color: null;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">docker</span> build <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">-t</span> mcp/brave-search:latest <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">-f</span> src/brave-search/Dockerfile .</span></code></pre></div>
+font-style: inherit;">-f</span> src/brave-search/Dockerfile .</span></code></pre></div></div>
 <p>With that, we are done getting the MCP server ready, so next we can look at setting up Brave Search.</p>
 </section>
 <section id="acquiring-brave-search-api-keys" class="level2">
@@ -57,7 +150,7 @@ font-style: inherit;">-f</span> src/brave-search/Dockerfile .</span></code></pre
 <h2 class="anchored" data-anchor-id="configuring-claude-desktop">3. Configuring Claude Desktop</h2>
 <p>To use MCP with Claude, you need to <a href="https://claude.ai/download?ref=maginative.com">download Claude desktop</a> so that it can access the local MCP server on your machine. Once you have downloaded and logged in, we’ll next need to configure Claude to use the server we created in step 1.</p>
 <p>It’s worth noting, I’m on a Windows machine but use WSL for my development, and this is where Docker is installed. We’ll need to take this into account when we are configuring Claude, as the Claude app is on the Windows side. To configure the tool, you’ll need to create a file in the following location <code>%APPDATA%\Claude\claude_desktop_config.json</code> and add the following:</p>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb3-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">{</span></span>
 <span id="cb3-2">  <span class="dt" style="color: #AD0000;
@@ -114,7 +207,7 @@ background-color: null;
 font-style: inherit;">}</span></span>
 <span id="cb3-12"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">}</span></span></code></pre></div>
+font-style: inherit;">}</span></span></code></pre></div></div>
 <p>Where we have replaced <code>&lt;BRAVE_API_KEY&gt;</code> with the API key created in step 2. Notice our target of the command is WSL and not Docker, as we are calling Docker via WSL. With this, the configuration is done.</p>
 <p>If the Claude app was open while you were doing this, you’ll need to reboot it. Note it minimises to the taskbar, so be sure to right-click and quit to force it to restart.</p>
 <p>When you reopen the app, you should see the following tool icon appear:</p>
@@ -142,7 +235,7 @@ font-style: inherit;">}</span></span></code></pre></div>
 <section id="how-mcp-works-under-the-hood" class="level1">
 <h1>How MCP Works: Under the Hood</h1>
 <p>Looking more closely at the source code, we can see the following in the <a href="https://github.com/modelcontextprotocol/servers/blob/main/src/brave-search/index.ts">index.ts</a>, where the <code>WEB_SEARCH_TOOL</code> object is defined with descriptions of both the tool and the inputs which will get passed to Claude so it knows what the tool can be used for and how to use it.</p>
-<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">const</span> WEB_SEARCH_TOOL<span class="op" style="color: #5E5E5E;
@@ -312,7 +405,7 @@ background-color: null;
 font-style: inherit;">,</span></span>
 <span id="cb4-28">}<span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">;</span></span></code></pre></div>
+font-style: inherit;">;</span></span></code></pre></div></div>
 <p>This MCP server is super simple. It’s just a couple hundred lines of code in a single file, with most of the logic written to interface with the Brave API. The simplicity is made possible by the Anthropic team creating MCP SDKs for many languages: <a href="https://github.com/modelcontextprotocol/typescript-sdk">typescript</a>, <a href="https://github.com/modelcontextprotocol/python-sdk">python</a>, <a href="https://github.com/modelcontextprotocol/java-sdk">java</a>, <a href="https://github.com/modelcontextprotocol/rust-sdk">rust</a>, etc.</p>
 <p>What integration could you build?</p>
 </section>
@@ -372,9 +465,9 @@ font-style: inherit;">;</span></span></code></pre></div>
 <section id="the-gpu-struggle" class="level1">
 <h1>The GPU Struggle</h1>
 <p>First up we need to find a couple of GPUs to run this project on. Unfortunately I don’t have a couple of H100s sitting under my desk, given a quick google shopping search shows they are going for around £30k each. Good news, is there is now a number of providers that allow you to rent a machine with GPU resources on a pay as you go basis. I initially tried <a href="https://lightning.ai/hlin-verl/studios/verl-getting-started">Lightning Studio</a> as this is recommended by <a href="https://github.com/volcengine/verl">veRL</a> as you are able to run a single L4 GPU for free. (subject to a quota). Running the project I was met with the error every machine learning engineer and has railed against:</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="ex" style="color: null;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="ex" style="color: null;
 background-color: null;
-font-style: inherit;">torch.OutOfMemoryError:</span> CUDA out of memory. Tried to allocate 148.00 MiB. GPU 0 has a total capacity of 14.75 GiB of which 7.06 MiB is free...</span></code></pre></div>
+font-style: inherit;">torch.OutOfMemoryError:</span> CUDA out of memory. Tried to allocate 148.00 MiB. GPU 0 has a total capacity of 14.75 GiB of which 7.06 MiB is free...</span></code></pre></div></div>
 <p>I quickly realised trying to replicate this project that a lot more GPU VRAM was required.</p>
 <p>Taking a closer look at the <a href="https://wandb.ai/jiayipan/TinyZero/runs/pa2vfdcm/overview">weights &amp; biases of the TinyZero run</a> we can see they used not 1, but 8 H200s! I’m already starting to think there is a little creative accounting going on if you can rent 8 H200s for $30 given the 4-hour compute time. While lighting AI is a very compelling product, to use multiple GPUs and anything more powerful than a L4 GPU you’ll need to subscribe to their $140/month tier, and specifically reserve a GPU for a period of time if you are wanting a H100 or above, so this was a non-starter. As a side note, Lighting AI looks like a great product giving you a VS code interface on a machine which allows you to “pick up” your project and your python environment and run it on a number of GPU configurations. This easily allow you to test code on a cheap set of resources and then with the click of a button move to a cluster of powerful GPUs.</p>
 <p>After consulting a <em>reliable source</em> (Reddit) I came across <a href="https://www.tensordock.com/">tensordock</a> which allows you to provision a GPU servers with no commitment just a per hour charge. The other key feature is that its a “top-up account”. E.g. You deposit money to the site and then you watch your pennies melt away in a puff of GPU heat. Most importantly for me this means there will be no nasty bills. The downside is once your account hits $0 they’ll go <code>rm -rf /</code> your machine so you need to keep a close eye on your balance.</p>
@@ -382,11 +475,11 @@ font-style: inherit;">torch.OutOfMemoryError:</span> CUDA out of memory. Tried t
 <section id="the-task" class="level1">
 <h1>The Task</h1>
 <p>With the compute sorted we can download the source code from GitHub</p>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">git</span> clone https://github.com/Jiayi-Pan/TinyZero.git</span></code></pre></div>
+font-style: inherit;">git</span> clone https://github.com/Jiayi-Pan/TinyZero.git</span></code></pre></div></div>
 <p>Next we are going to want to setup our environment which is very well detailed within the readme of the repo. With this done we can then go ahead and create the training data. The authors provide a script to create a dataset for this task:</p>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1">python examples<span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1">python examples<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">/</span>data_preprocess<span class="op" style="color: #5E5E5E;
 background-color: null;
@@ -394,9 +487,9 @@ font-style: inherit;">/</span>countdown.py <span class="op" style="color: #5E5E5
 background-color: null;
 font-style: inherit;">--</span>local_dir .<span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">/</span></span></code></pre></div>
+font-style: inherit;">/</span></span></code></pre></div></div>
 <p>This creates two parquet files our train and test dataset, here is what one of the rows look like:</p>
-<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb4-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">{</span></span>
 <span id="cb4-2">    <span class="dt" style="color: #AD0000;
@@ -527,11 +620,11 @@ background-color: null;
 font-style: inherit;">}</span></span>
 <span id="cb4-18"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">}</span></span></code></pre></div>
+font-style: inherit;">}</span></span></code></pre></div></div>
 <p>So you can see from this dataset, we are playing <a href="https://www.youtube.com/watch?v=zluCvl24AiA">the classic countdown game</a>; asking the model to take 3 numbers and using arithmetic operations make it hit the target. The other key thing to notice is we are prompting the model to think.</p>
 <p>We are going to be starting with <code>qwen2.5:3b</code>. This is model does not have any inherent reasoning built in, unlike o1 or R1, and it’s fairly lightweight allowing us to fine-tune with our meager $30 budget.</p>
 <p>Let’s take this model and ask it the first question in our dataset:</p>
-<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"> <span class="ex" style="color: null;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"> <span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">ollama</span> run qwen2.5:3b <span class="st" style="color: #20794D;
 background-color: null;
@@ -553,7 +646,7 @@ font-style: inherit;">nAssistant: Let me solve this step by step.</span><span cl
 background-color: null;
 font-style: inherit;">\\</span><span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">n&lt;think&gt;</span></span></code></pre></div>
+font-style: inherit;">n&lt;think&gt;</span></span></code></pre></div></div>
 <blockquote class="blockquote">
 <p>To achieve a result of 98 using the numbers [44, 19, 35] and each number only once with basic arithmetic operations, I need to consider how these numbers can be combined. One possible combination is: (44 - 19) * 35 + some adjustment that brings us closer to 98.(44 - 19 = 25), then the expression becomes (25 + some_adjustment). Calculating this, we get: (25 = 875). So, to reach a result of 98 from here requires an adjustment. Let’s see if we can find such an adjustment using the remaining number, 44. </p>
 <p>The final equation is <answer> (44 - 19) * 35 + 2 * 44 = 98</answer>. This calculation shows that (875 + 2*44 = 98), as the second multiplication of 2 by 44 gives us an additional 88, bringing our total to 98. </p>
@@ -568,18 +661,18 @@ font-style: inherit;">n&lt;think&gt;</span></span></code></pre></div>
 </ol>
 <p>So no surprises there, a model that was built and trained on text doesn’t have great mathematical abilities. This is where our fine-tuning can help.</p>
 <p>It is also worth pointing out, with prompting we get pseudo reasoning, but this is not the default behaviour, e.g.</p>
-<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><span class="ex" style="color: null;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">ollama</span> run qwen2.5:3b <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"I have 5 eggs on a piece of wood hanging over the edge of a table. What happens if I was to hit the end of the wood hanging over the table?"</span></span></code></pre></div>
+font-style: inherit;">"I have 5 eggs on a piece of wood hanging over the edge of a table. What happens if I was to hit the end of the wood hanging over the table?"</span></span></code></pre></div></div>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Response
+<span class="screen-reader-only">Note</span>Response
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -600,11 +693,11 @@ Response
 </div>
 </div>
 <p>For ease we have been using ollama but we’ll need to now download the model from HuggingFace to input into this training run.</p>
-<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><span class="ex" style="color: null;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">huggingface-cli</span> download Qwen/Qwen2.5-3B <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">--local-dir</span> models/Qwen/Qwen2.5-3B </span></code></pre></div>
+font-style: inherit;">--local-dir</span> models/Qwen/Qwen2.5-3B </span></code></pre></div></div>
 </section>
 <section id="running-the-project" class="level1">
 <h1>Running the project</h1>
@@ -651,7 +744,7 @@ bash ./scripts/train_tiny_zero.sh</code></pre>
 <p>You can see the LLM initially responding with around 500 token, and then decreases as it repeatedly is given a negative reward for an incorrect or invalid answer. This then reverses and starts to increase as the model learns to use the tokens for self-verification. The model is innately learning to reason, with no specific reasoning data supplied for the model to learn from.</p>
 <p>For a number of reasons the number of steps I could achieve for $30 was quite low but you can see the same trend until convergence with the <a href="https://wandb.ai/jiayipan/TinyZero/runs/pa2vfdcm/overview">TinyZero authors run</a></p>
 <p>Looking at the logs we can see a similar pattern. Here is one of the first outputs:</p>
-<div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1">   1 epoch 0, step 1</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1">   1 epoch 0, step 1</span>
 <span id="cb9-2">   2 --------------------------------</span>
 <span id="cb9-3">   3 Target: 79 | Numbers: <span class="co" style="color: #5E5E5E;
 background-color: null;
@@ -668,9 +761,58 @@ font-style: inherit;">[</span><span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">55, 30, 7, 61</span><span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">]</span>, create an equation that equals 79. You can use basic arithmetic operations (+, -, *, /) and each number can only be used once. how your work in &lt;think&gt; &lt;/think&gt; tags. And return the final answer in &lt;answer&gt; &lt;/answer&gt; tags, for example &lt;answer&gt; (1 + 2) / 3 &lt;/answer&gt;.</span>
+font-style: inherit;">]</span>, create an equation that equals 79. You can use basic arithmetic operations (+, -, *, /) and each number can only be used once. how your work in <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">think</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span> <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">think</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span> tags. And return the final answer in <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">answer</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span> <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">answer</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span> tags, for example <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">answer</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span> (1 + 2) / 3 <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">answer</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span>.</span>
 <span id="cb9-7">   7 Assistant: Let me solve this step by step.</span>
-<span id="cb9-8">   8 &lt;think&gt;</span>
+<span id="cb9-8">   8 <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">think</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span></span>
 <span id="cb9-9">   9 The equation needs to involve all the given numbers exactly once,</span>
 <span id="cb9-10">  10 and we need to use basic arithmetic operations (+, -, *, /).</span>
 <span id="cb9-11">  11 Let's start by looking at the given numbers:</span>
@@ -686,24 +828,177 @@ font-style: inherit;">]</span>.</span>
 <span id="cb9-15">  15 Therefore, we need to try other divisions.</span>
 <span id="cb9-16">  16 Next, we can try dividing 55 by 11, which gives us 5,</span>
 <span id="cb9-17">  17 and we can add 30 to 61 to get 91.</span>
-<span id="cb9-18">  18 So the equation becomes: &lt;anim&gt;,55/24/30+305&lt;/anim&gt;.</span>
-<span id="cb9-19">  19 Let's see if it works: &lt;anim&gt;,55/24/30+305&lt;/anim&gt; = &lt;anim width="121"&gt; 2 + 2 &lt;/anim&gt; = &lt;anim&gt; 4 &lt;/anim&gt;.</span>
+<span id="cb9-18">  18 So the equation becomes: <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">anim</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span>,55/24/30+305<span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">anim</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span>.</span>
+<span id="cb9-19">  19 Let's see if it works: <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">anim</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span>,55/24/30+305<span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">anim</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span> = <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">anim</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;"> width</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"121"</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span> 2 + 2 <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">anim</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span> = <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">anim</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span> 4 <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">anim</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span>.</span>
 <span id="cb9-20">  20 The result is not correct, so we move on to another approach.</span>
 <span id="cb9-21">  21 Another candidate for division could be 7.</span>
 <span id="cb9-22">  22 Let's try 55 divided by 7, which gives us 7.857,</span>
 <span id="cb9-23">  23 and we can add 30 and subtract 61 to get -22.</span>
-<span id="cb9-24">  24 So the equation becomes: &lt;anim&gt;,55/7+306&lt;/anim&gt;.</span>
-<span id="cb9-25">  25 Let's see if it works: &lt;anim&gt;,55/7+306&lt;/anim&gt; = &lt;anim&gt; 12 + 22 &lt;/anim&gt; = &lt;anim&gt; 34 &lt;/anim&gt;.</span>
+<span id="cb9-24">  24 So the equation becomes: <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">anim</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span>,55/7+306<span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">anim</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span>.</span>
+<span id="cb9-25">  25 Let's see if it works: <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">anim</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span>,55/7+306<span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">anim</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span> = <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">anim</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span> 12 + 22 <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">anim</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span> = <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">anim</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span> 34 <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">anim</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span>.</span>
 <span id="cb9-26">  26 The result is not correct, so we move on to another approach.</span>
 <span id="cb9-27">  27 Let's try adding 55 and 28, and we can subtract 30 and multiply by 7.</span>
-<span id="cb9-28">  28 So the equation becomes: &lt;anim&gt;,(55+30)(7-55-28)/24&lt;/anim&gt;.</span>
-<span id="cb9-29">  29 Let's see if it works: &lt;anim&gt;,(55+30)(7-55-28)/24&lt;/anim&gt;</span>
-<span id="cb9-30">  30 Answer: &lt;anim&gt; 79&lt;|endoftext|&gt;</span>
-<span id="cb9-31">  31 No equation found</span></code></pre></div>
+<span id="cb9-28">  28 So the equation becomes: <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">anim</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span>,(55+30)(7-55-28)/24<span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">anim</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span>.</span>
+<span id="cb9-29">  29 Let's see if it works: <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">anim</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span>,(55+30)(7-55-28)/24<span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">anim</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span></span>
+<span id="cb9-30">  30 Answer: <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">anim</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span> 79&lt;|endoftext|&gt;</span>
+<span id="cb9-31">  31 No equation found</span></code></pre></div></div>
 <p>Initially you might argue this is reasoning, but I’d hope you’d agree with me its just a lot of tokens and not much correctness. Matching what we see from the graphs above, long token length declining reward. Also worth commenting on the strange <code>&lt;anim&gt;</code> tag being used in this answer which seems to be the only one.</p>
 <p>Towards the end of the training run we get much more clear examples of self-verifications.</p>
 <p>Here is an example while the answer is not correct, the model is able to self verify to a point where it can state <code>Perhaps there was a misunderstanding, or perhaps my interpretation of the prompt was incorrect.</code></p>
-<div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><span class="an" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><span class="an" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">3632 Target:</span><span class="co" style="color: #5E5E5E;
 background-color: null;
@@ -728,12 +1023,40 @@ background-color: null;
 font-style: inherit;">3636 Assistant:</span><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"> Let me solve this step by step.</span></span>
-<span id="cb10-6">3637 &lt;think&gt; First, we can add the two smaller numbers 14 and 76 to get 90. Then, subtract 56 from this sum to get 34. So, the equation is (76 + 14) - 56 = 34. However, this doesn't equal 72. Let's try another combination. If we take 56 and 14, and subtract 76 from them, we get -20. That's not equal to 72 either. Now, let's try 76 minus 56 and add 14. This gives us 76 - 56 + 14 = 34. This is still not 72. It looks like I've run out of ideas. Perhaps, there's an alternative interpretation I haven't considered yet. For example, maybe we should look for a different combination of operations or another way to manipulate these numbers that might yield 72. The most natural operation to consider might be multiplication and addition. Let's see... if we use the numbers in a different way, such as 76 multiplied by 14, then subtract 56, we can achieve 72 precisely. So, the equation would be (76 * 14) - 56. When we perform the operations, we get 1064 - 56 = 1008, which is incorrect. It seems I must rethink the approach. I realize now that the desired equation cannot be formed with the given numbers using the basic arithmetic operations. Perhaps there was a misunderstanding, or perhaps my interpretation of the prompt was incorrect. &lt;/think&gt;</span>
-<span id="cb10-7">3638 &lt;answer&gt; (76 * 14) - 56 &lt;/answer&gt;&lt;|endoftext|&gt;</span>
+<span id="cb10-6">3637 <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">think</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span> First, we can add the two smaller numbers 14 and 76 to get 90. Then, subtract 56 from this sum to get 34. So, the equation is (76 + 14) - 56 = 34. However, this doesn't equal 72. Let's try another combination. If we take 56 and 14, and subtract 76 from them, we get -20. That's not equal to 72 either. Now, let's try 76 minus 56 and add 14. This gives us 76 - 56 + 14 = 34. This is still not 72. It looks like I've run out of ideas. Perhaps, there's an alternative interpretation I haven't considered yet. For example, maybe we should look for a different combination of operations or another way to manipulate these numbers that might yield 72. The most natural operation to consider might be multiplication and addition. Let's see... if we use the numbers in a different way, such as 76 multiplied by 14, then subtract 56, we can achieve 72 precisely. So, the equation would be (76 * 14) - 56. When we perform the operations, we get 1064 - 56 = 1008, which is incorrect. It seems I must rethink the approach. I realize now that the desired equation cannot be formed with the given numbers using the basic arithmetic operations. Perhaps there was a misunderstanding, or perhaps my interpretation of the prompt was incorrect. <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">think</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span></span>
+<span id="cb10-7">3638 <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">answer</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span> (76 * 14) - 56 <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">answer</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span>&lt;|endoftext|&gt;</span>
 <span id="cb10-8">3639 Wrong result: equation = 1008, target = 72</span>
-<span id="cb10-9">3640 --------------------------------</span></code></pre></div>
+<span id="cb10-9">3640 --------------------------------</span></code></pre></div></div>
 <p>And here is an example where it gets the answer right after a period of time of “thinking”.</p>
-<div class="sourceCode" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb11-1">  3613 --------------------------------</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb11-1">  3613 --------------------------------</span>
 <span id="cb11-2">  3614 Target: 69 | Numbers: <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">[</span><span class="ot" style="color: #003B4F;
@@ -749,11 +1072,81 @@ font-style: inherit;">[</span><span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">74, 65, 78</span><span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">]</span>, create an equation that equals 69. You can use basic arithmetic operations (+, -, *, /) and each number can only be used once. how your work in &lt;think&gt; &lt;/think&gt; tags. And return the final answer in &lt;answer&gt; &lt;/answer&gt; tags, for example &lt;answer&gt; (1 + 2) / 3 &lt;/answer&gt;.</span>
+font-style: inherit;">]</span>, create an equation that equals 69. You can use basic arithmetic operations (+, -, *, /) and each number can only be used once. how your work in <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">think</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span> <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">think</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span> tags. And return the final answer in <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">answer</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span> <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">answer</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span> tags, for example <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">answer</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span> (1 + 2) / 3 <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">answer</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span>.</span>
 <span id="cb11-6">  3618 Assistant: Let me solve this step by step.</span>
-<span id="cb11-7">  3619 &lt;think&gt; Alright, let's try to solve this equation using the numbers 74, 65, 78. We need them to equal 69. One way to do this would be to use the difference of the argest number and the sum of the other two. So we can write the equation as (78 - 65) + 74, which simplifies to 13 + 74, and that equals 87. However, this doesn't equal 69, o let's try another approach. How about we use the product of the smallest number and the largest number, then subtract the middle number? So we can try (74 * 78) - 65, which implifies to 5712 - 65, and that also doesn't equal 69. Alright, let's try something else. Perhaps we can use the largest number minus the sum of the two smaller numbers. So e can use (74 - 65) + 78, which simplifies to 9 + 78, and that still doesn't equal 69. Hmm, seems like we're running out of ideas. Alright, last one: what about (78 - 65) + 4? This time, it's (78 - 65) + 74, which simplifies to 63 + 74, and that does equal 137, but we're still not there. Okay, one last try: what about (74 - 78) + 65? That implifies to -4 + 65, and that gives us an answer of 61, which is still not correct. At this point, it seems we need another perspective. Let's try a different combination: hat if we use (65 + 78) - 74? That gives us an answer of 143 - 74, which simplifies to 69. Hooray, we got it! This equation uses all three numbers and solves to 69. &lt;/think&gt;</span>
-<span id="cb11-8">  3620 &lt;answer&gt; (65 + 78) - 74 &lt;/answer&gt;&lt;|endoftext|&gt;</span>
-<span id="cb11-9">  3621 Correct equation: (65 + 78) - 74 = 69</span></code></pre></div>
+<span id="cb11-7">  3619 <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">think</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span> Alright, let's try to solve this equation using the numbers 74, 65, 78. We need them to equal 69. One way to do this would be to use the difference of the argest number and the sum of the other two. So we can write the equation as (78 - 65) + 74, which simplifies to 13 + 74, and that equals 87. However, this doesn't equal 69, o let's try another approach. How about we use the product of the smallest number and the largest number, then subtract the middle number? So we can try (74 * 78) - 65, which implifies to 5712 - 65, and that also doesn't equal 69. Alright, let's try something else. Perhaps we can use the largest number minus the sum of the two smaller numbers. So e can use (74 - 65) + 78, which simplifies to 9 + 78, and that still doesn't equal 69. Hmm, seems like we're running out of ideas. Alright, last one: what about (78 - 65) + 4? This time, it's (78 - 65) + 74, which simplifies to 63 + 74, and that does equal 137, but we're still not there. Okay, one last try: what about (74 - 78) + 65? That implifies to -4 + 65, and that gives us an answer of 61, which is still not correct. At this point, it seems we need another perspective. Let's try a different combination: hat if we use (65 + 78) - 74? That gives us an answer of 143 - 74, which simplifies to 69. Hooray, we got it! This equation uses all three numbers and solves to 69. <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">think</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span></span>
+<span id="cb11-8">  3620 <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">answer</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span> (65 + 78) - 74 <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">answer</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span>&lt;|endoftext|&gt;</span>
+<span id="cb11-9">  3621 Correct equation: (65 + 78) - 74 = 69</span></code></pre></div></div>
 <p>You can see the self verification and “aha” moment with part of the output having <code>It seems I must rethink the approach</code>.</p>
 <p>It’s worth reflecting here we have no control over the “amount” of reasoning, other than the max token length. A <a href="https://arxiv.org/abs/2501.19393">recent paper recently introduce the idea of “budget forcing”</a> which was a neat way of injecting <code>wait</code> into the models thinking to force it to reason further up until a targeted amount of time.</p>
 </section>
